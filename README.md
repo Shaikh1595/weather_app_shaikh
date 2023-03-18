@@ -1,3 +1,3 @@
 # Shaikh's Weather App
 
-Simple waether app using HTML, CSS, and JavaScript.
+Simple weather app using HTML, CSS, and JavaScript.
