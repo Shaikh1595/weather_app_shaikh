@@ -42,6 +42,12 @@ search.addEventListener("click", () => {
         case "Rain":
           image.src = "images/rain.png";
           break;
+        case "Thunderstorm":
+          image.src = "images/thunderstorm.png";
+          break;
+        case "Drizzle":
+          image.src = "images/drizzle.png";
+          break;
         case "Snow":
           image.src = "images/snow.png";
           break;
@@ -51,18 +57,24 @@ search.addEventListener("click", () => {
         case "Haze":
           image.src = "images/mist.png";
           break;
+        case "Mist":
+          image.src = "images/mist.png";
+          break;
+        case "Fog":
+          image.src = "images/mist.png";
         default:
-          image.src = "";
+          image.src = "images/default.png";
       }
+
       temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
       description.innerHTML = `${json.weather[0].description}`;
       humidity.innerHTML = `${json.main.humidity}%`;
-      wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+      wind.innerHTML = `${parseInt(json.wind.speed)}km/h`;
 
       weatherBox.style.display = "";
       weatherDetails.style.display = "";
       weatherBox.classList.add("fadeIn");
       weatherDetails.classList.add("fadeIn");
-      container.style.height = "590px";
+      container.style.height = "600px";
     });
 });
